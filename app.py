@@ -5,7 +5,7 @@ from bokeh.embed import components
 from bokeh.resources import CDN
 import quandl
 
-app=Flask(__name__)
+app = Flask(__name__)
 
 def datetime(x):
     return np.array(x, dtype=np.datetime64)
