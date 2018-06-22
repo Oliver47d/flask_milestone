@@ -4,6 +4,7 @@ from bokeh.plotting import figure
 from bokeh.embed import components
 from bokeh.resources import CDN
 import quandl
+import numpy as np
 
 app = Flask(__name__)
 
