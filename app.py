@@ -4,13 +4,16 @@ from bokeh.plotting import figure
 from bokeh.embed import components
 from bokeh.resources import CDN
 import quandl
+
+app=Flask(__name__)
+
 def datetime(x):
     return np.array(x, dtype=np.datetime64)
 
 @app.route('/index',methods=['GET','POST'])
 def index():
   if request.method=="GET":
-    return render_template('index.html')
+    return render_template('choose_stock.html')
 
   else:
     ticker_sym=request.form['ticker']
