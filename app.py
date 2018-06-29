@@ -12,7 +12,7 @@ app = Flask(__name__)
 def datetime(x):
     return np.array(x, dtype=np.datetime64)
 
-@app.route('/index',methods=['GET','POST'])
+@app.route('/',methods=['GET','POST'])
 def index():
   if request.method=="GET":
     return render_template('choose_stock.html')
